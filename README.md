@@ -1,41 +1,36 @@
 # Kahna-Tour-And-Travels
 
-Overview
+<b>Overview</b>
 
 Welcome to Kanha Tour and Travels, your premier travel partner in Himachal Pradesh! This website provides information about our services, available routes, vehicle reservations, and contact details.
 
-Features
+<b>Features</b>
 
-Home Page: Welcomes users with a logo and navigation bar.
+Home Page: Welcomes users with a logo and navigation bar.<br>
+About Us: Detailed description of our services and mission.<br>
+Services: Information on vehicle reservations, long-term rentals, and one-way rentals.<br>
+Popular Routes: Pricing and availability for key travel routes.<br>
+Gallery: Collection of images showcasing our vehicles and travel destinations.<br>
+Contact Us: Provides phone and email details for customer inquiries.<br>
+<br><br>
+<b>Technologies Used</b>
 
-About Us: Detailed description of our services and mission.
-
-Services: Information on vehicle reservations, long-term rentals, and one-way rentals.
-
-Popular Routes: Pricing and availability for key travel routes.
-
-Gallery: Collection of images showcasing our vehicles and travel destinations.
-
-Contact Us: Provides phone and email details for customer inquiries.
-
-Technologies Used
-
-HTML5 for structuring the web pages.
-
-CSS3 for styling (linked via style.css).
-
-JavaScript for interactivity (linked via script.js).
-
-File Structure
+HTML5 for structuring the web pages.<br>
+CSS3 for styling (linked via style.css).<br>
+JavaScript for interactivity (linked via script.js).<br>
+<br><br>
+<b>File Structure</b>
 
 Kanha-Tour-And-Travels/
-│── index.html  (Main website file)
-│── style.css   (CSS styles)
-│── script.js   (JavaScript functionality)
-│── images/     (Folder containing images used on the website)
-│── README.md   (This file)
 
-How to Use
+│── index.html  (Main website file)<br>
+│── style.css   (CSS styles)<br>
+│── script.js   (JavaScript functionality)<br>
+│── images/     (Folder containing images used on the website)<br>
+│── README.md   (This file)<br>
+
+<br><br>
+<b>How to Use</b>
 
 Open index.html in a browser to view the website.
 
