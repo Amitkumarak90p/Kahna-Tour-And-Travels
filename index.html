@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,31 +16,38 @@
   </video>
 
   <div class="hero-content">
-    <h1>Explore Himachal With Comfort</h1>
-    <p>Book cars easily and enjoy your journey</p>
-    <a href="#routes"><button>View Popular Routes</button></a>
-  </div>
+  <h1 style="font-size: 76px; font-weight: 700; opacity: 0.7; text-shadow: 2px 2px #8b8a8a;">
+    <span id="typing-text">Explore Himachal</span> <br>With Comfort
+  </h1>
+  <p>Book cars easily and enjoy your journey</p>
+  <a href="#routes"><button>View Popular Routes</button></a>
+</div>
+
 </section>
 
 
-    <header class="header" id="header">
-        <div id="logo">
-            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
-        </div>
-        <div id="text">
-            <center><b><p>Welcome To<br>Kanha Tour And Travels</p></b></center>
-        </div>
-        <nav>
-            <ul class="nav">
-                <b><li><a href="index.html" target="_blank" class="nav-button">Home</a></li>
-                <li><a href="#about" class="nav-button">About</a></li>
-                <li><a href="#services" class="nav-button">Services</a></li>
-                <li><a href="#routes" class="nav-button">Routes</a></li>
-                <li><a href="#gallery" class="nav-button">Gallery</a></li>
-                <li><a href="#contact" class="nav-button">Contact</a></li></b>
-            </ul>
-        </nav>
-    </header>
+<header class="navbar">
+  <div class="logo-title">
+    <img src="images/logo.png" alt="Kanha Logo" class="logo" />
+    <span class="nav-title">Kanha Tour And Travels Welcomes You .....</span>
+  </div>
+
+  <!-- Hamburger icon -->
+  <div class="hamburger" id="hamburger">&#9776;</div>
+
+  <!-- Nav Links -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home" class="nav-button">Home</a></li>
+    <li><a href="#about" class="nav-button">About</a></li>
+    <li><a href="#services" class="nav-button">Services</a></li>
+    <li><a href="#routes" class="nav-button">Routes</a></li>
+    <li><a href="#gallery" class="nav-button">Gallery</a></li>
+    <li><a href="#contact" class="nav-button">Contact</a></li>
+  </ul>
+</header>
+
+
+
     <div class="container">
         <div id="about">
             <h2>About Us :</h2>
@@ -74,47 +82,58 @@
             <br></div>
         </div>
         <div id="routes">
-            <p style="font-size: 30px;font-weight: bold;">Our Popular Routes :</p>
-            <br>
-            <div class="route1">
-                <p>First route is from Jhakri to Shimla
-                    <br><u>Price:</u><br>Sedan:3500 rupees <br>SUV:4500 rupees
-                </p>
-            </div>
-            <div class="route2">
-                <p>Second route is from Jhakri to Chandigarh
-                    <br><u>Price:</u><br>Sedan:6500 rupees <br>SUV:9000 rupees
-                </p>
-            </div>
-            <div class="route3">
-                <p>Third route is from Jhakri to Delhi
-                    <br><u>Price:</u><br>Sedan:13000 rupees <br>SUV:17000 rupees
-                </p>
-            </div>
-            <div class="route4">
-                <p>Fourth route is from Rampur Bushahr to Rekong peo
-                    <br><u>Price:</u><br>Sedan:3500 rupees <br>SUV:4500 rupees
-                </p>
-            </div>
-            <div class="route4">
-                <p>Fifth route is from Rampur Bushahr to Kaza
-                    <br><u>Price:</u><br>Sedan:12000 rupees <br>SUV:15000 rupees
-                </p>
-            </div>
-            <div class="route4">
-                <p>Sixth route is from Jhakri to kalpa
-                    <br><u>Price:</u><br>Sedan:4000 rupees <br>SUV:5000 rupees
-                </p>
-            </div>
-           
-        </div>
+  <h2>Our Popular Routes :</h2>
+  <div class="routes-grid">
+
+    <div class="route-card" data-aos="fade-up">
+      <p><strong>Jhakri to Shimla</strong></p>
+      <p><u>Price:</u><br>🚗 Sedan: ₹3500<br>🚙 SUV: ₹4500</p>
+      <button class="book-btn">Book Now</button>
+    </div>
+
+    <div class="route-card" data-aos="fade-up" data-aos-delay="100">
+      <p><strong>Jhakri to Chandigarh</strong></p>
+      <p><u>Price:</u><br>🚗 Sedan: ₹6500<br>🚙 SUV: ₹9000</p>
+      <button class="book-btn">Book Now</button>
+    </div>
+
+    <div class="route-card" data-aos="fade-up" data-aos-delay="100">
+      <p><strong>Jhakri to Delhi</strong></p>
+      <p><u>Price:</u><br>🚗 Sedan: ₹13000<br>🚙 SUV: ₹17000</p>
+      <button class="book-btn">Book Now</button>
+    </div>
+
+    <div class="route-card" data-aos="fade-up" data-aos-delay="100">
+      <p><strong>Rampur Bushahr to Rekong Peo</strong></p>
+      <p><u>Price:</u><br>🚗 Sedan: ₹3500<br>🚙 SUV: ₹4500</p>
+      <button class="book-btn">Book Now</button>
+    </div>
+
+    <div class="route-card" data-aos="fade-up" data-aos-delay="300">
+      <p><strong>Rampur Bushahr to Kaza</strong></p>
+      <p><u>Price:</u><br>🚗 Sedan: ₹12000<br>🚙 SUV: ₹15000</p>
+      <button class="book-btn">Book Now</button>
+    </div>
+
+    <div class="route-card" data-aos="fade-up" data-aos-delay="300">
+      <p><strong>Jhakri to Kalpa</strong></p>
+      <p><u>Price:</u><br>🚗 Sedan: ₹4000<br>🚙 SUV: ₹5000</p>
+      <button class="book-btn">Book Now</button>
+    </div>
+
+  </div>
+</div>
+
         <div id="gallery" class="scroll-gallery">
             <h2 style="color: aliceblue;">Gallery :</h2>
             <div class="scroll-container">
                 
                 <img class="img1" src="images/crista1.jpg" alt="">
+                <img class="img4" src="images/mountains1.jpg" alt="">
                 <img class="img3" src="images/crista4.jpg" alt="">
+                <img class="img4" src="images/mountains2.jpg" alt="">
                 <img class="img4" src="images/etios3.jpg" alt="">
+                <img class="img4" src="images/mountains3.jpg" alt="">
                 <img class="img4" src="images/hanumanji.jpg" alt="">
                 <img class="img4" src="images/etios1.jpg" alt="">
                 <img class="img4" src="images/etios2.jpg" alt="">
@@ -128,22 +147,46 @@
                 <img class="img4" src="images/mountain4.jpg" alt="">
                 <img class="img4" src="images/mountain5.jpg" alt="">
                 <img class="img4" src="images/mountain7.jpg" alt="">
+                <img class="img4" src="images/mountains4.jpg" alt="">
             </div>
         </div>
-        <div id="contact">
-            <h2>Contact Us :</h2>
-            <b><p>For any queries or assistance, please contact us at:</p>
-            <p>Phone:&nbsp;
-                <a href="tel:+919857400027" class="call">Call</a>
-                
-            <p><a href="mailto:aaainnovs@gmail.com">Email:aaainnovs@gmail.com</a></p></b>
-        </div>
-        
-        
-    </div>
+    <div id="contact">
+ <div class="contact-info">
+ <h2>📞 Contact Us</h2>
+ <p class="subtitle">For any queries or assistance, feel free to reach out:</p>
+
+
+ <div class="contact-card">
+ <div class="contact-item">
+ <span>📱 Phone:</span>
+ <a href="tel:+919857400027" class="call">+91 98574 00027</a>
+ </div>
+
+
+ <div class="contact-item">
+ <span>📧 Email:</span>
+ <a href="mailto:aaainnovs@gmail.com" class="email-link">aaainnovs@gmail.com</a>
+ </div>
+ </div>
+ </div>
+
+
+ <div class="map-container">
+ <iframe
+ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.44135512981!2d77.83413087442497!3d31.2528877751745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390577ff567a4c13%3A0x416a9b5a9793e2ca!2sRampur%20Bushahr!5e0!3m2!1sen!2sin!4v1703787867184!5m2!1sen!2sin"
+ width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+ referrerpolicy="no-referrer-when-downgrade">
+ </iframe>
+ </div>
+</div>
     <footer>
-        <center><p class="footer">&copy; 2024 Kanha Tour And Travels. All Rights Reserved.</p></center>
+        <p class="footer-text">© 2024 Kanha Tour And Travels. All Rights Reserved.</p>
     </footer>
+
     <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

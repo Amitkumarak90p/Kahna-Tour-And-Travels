@@ -11,6 +11,7 @@ body, html {
 html {
   scroll-behavior: smooth;
 }
+/* HERO SECTION */
 .hero {
   position: relative;
   height: 100vh;
@@ -22,6 +23,7 @@ html {
   text-align: center;
 }
 
+/* BACKGROUND VIDEO */
 .bg-video {
   position: absolute;
   top: 0;
@@ -33,21 +35,48 @@ html {
   filter: brightness(0.6); /* darken background for readability */
 }
 
+/* HERO CONTENT */
 .hero-content {
-  z-index: 1;
   position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+/* MAIN HEADING */
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px #8b8a8a;
   margin-bottom: 20px;
+  line-height: 1.2;
 }
 
+/* TYPING TEXT ONLY */
+#typing-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* CARET BLINK ANIMATION */
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* SUBTEXT */
 .hero-content p {
   font-size: 1.5rem;
   margin-bottom: 30px;
 }
 
+/* BUTTON STYLES */
 .hero-content button {
   background-color: #0097a7;
   color: white;
@@ -56,11 +85,44 @@ html {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  opacity: 0.5;
   transition: background-color 0.3s ease;
 }
 
 .hero-content button:hover {
   background-color: #006064;
+  opacity: 1;
+}
+
+/* RESPONSIVE DESIGN (OPTIONAL IMPROVEMENT) */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-content button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 468px) {
+  .hero-content h1 {
+    font-size: 25px;
+  }
+
+  .hero-content p {
+    font-size: 20px;
+  }
+
+  .hero-content button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }
 
 
@@ -100,75 +162,130 @@ html {
     height: auto;
 }
 
-.header {
+/* Header Container */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+}
+/* Logo + Text */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.nav-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3e3e3e;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  color: #000;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-links li a:hover {
+  transform: translateY(-6px);
+  color: #0097a7;
+  box-shadow: 0 6px 12px rgba(0, 151, 167, 0.2);
+}
+
+.nav-links li a:active {
+  transform: translateY(3px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Typing Animation */
+#typing-text {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  display: inline-block;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: #ffffff;
-    color: #000000;
-}
+  }
 
-#logo img {
-    width: 25%;
-    height: auto;
-    margin-right: 10px;
-    float: left;
-}
-
-#text p {
-    font-size: 3rem;
-    color: #0f0f0f;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-    margin: 0;
-}
-
-nav {
-    background: transparent;
-    padding: 10px;
-    position: relative;
-}
-
-.nav {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.nav li {
-    display: inline;
-}
-
-.nav-button {
-    background: transparent;
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 15px 32px;
+  .nav-links li {
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    margin-left: 10px;
-    cursor: pointer;
-    border-radius: 12px;
-    box-shadow: 0 5px #ffffff;
-    transition: transform 0.5s, box-shadow 0.3s;
+    padding: 10px 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .logo-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
-.nav-button:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 7px 	#0097a7;
-    color: 	#0097a7;
-}
-.nav-button:active {
-        transform: translateY(6px);
-        box-shadow: 0 2px #2c3e50;
-    }
-    
 section {
         margin-bottom: 40px;
         padding: 20px;
@@ -197,29 +314,90 @@ section {
 }
     
 #routes {
-        background-color: #f1f1f6;
-        box-shadow: 2px 2px 12px #070707;
-        padding: 20px;
-        float: left;
+  background-color: #f9fafa;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 1200px;
 }
-    
-.route1, .route2, .route3, .route4 {
-        background-color: #f5fbfa;
-        box-shadow: 2px 2px 12px #070707;
-        width: 25%;
-        margin: 20px;
-        float: left;
-        transition: transform 1s;
-        display: flex;
-        flex-wrap: wrap;
-        background-color: #2c3e50;
-        color: #f1f1f6;
-        padding: 10px;
+
+#routes h2 {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 30px;
 }
-    
-.route1:hover, .route2:hover, .route3:hover, .route4:hover {
-        transform: scale(1.2);
+
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
+
+/* Tablet View (up to 1024px) */
+@media (max-width: 1024px) {
+  .routes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile View (up to 600px) */
+@media (max-width: 600px) {
+  .routes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.route-card {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+}
+
+.route-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 151, 167, 0.3);
+}
+
+.route-card p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.route-card u {
+  color: #ffd700;
+  font-weight: 500;
+}
+
+/* Book Now Button */
+.book-btn {
+  margin-top: 10px;
+  background-color: #0097a7;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start;
+}
+
+.book-btn:hover {
+  background-color: #007b8a;
+  transform: translateY(-2px);
+}
+
     
 #gallery {
     box-shadow: 2px 2px 12px #070707;
@@ -281,191 +459,253 @@ section {
         transform: translateX(-50%);
     }
 }
+#contact {
+  background-color: #f9fafa;
+  padding: 30px; /* Reduced padding for better side-by-side layout */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 1000px; /* Increased max-width to accommodate the two-column layout */
+  margin: 40px auto; /* Adjusted margin */
+  font-family: 'Segoe UI', sans-serif;
+  text-align: left; /* Changed text alignment to left for the main container */
+  display: flex; /* Enable flexbox for the contact section */
+  flex-direction: row; /* Arrange items in a row */
+  align-items: flex-start; /* Align items to the top */
+  gap: 30px; /* Space between the contact info and the map */
+ }
+ 
 
-.call{
-    width: 60px;
-    height: 30px;
-    margin-left: 20px;
-    background: transparent;
-    border-radius: 7px;
-    transition: transform 0.5s, box-shadow 0.3s;
-}
-.call:active{
-    transform: translateY(6px);
-        box-shadow: 0 2px #2c3e50;
-}
-.footer{
-        background-color: #2c3e50;
-        color: #f1f1f6;
-        height: 50px;
-        text-align: center;
-}
-h2 {
-    font-size: 2rem;
-    color: #070707;
-    text-align: left;
-    margin-bottom: 20px;
-}
+ .contact-info {
+  flex: 1; /* Takes up remaining space, will be on the left */
+  padding-right: 20px; /* Add some spacing from the map */
+ }
+ 
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
+ #contact h2 {
+  font-size: 2.4rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: left; /* Keep heading text aligned to the left */
+ }
+ 
 
-li {
-    margin-bottom: 10px;
+ #contact .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+ }
+ 
+
+ .contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced gap for a tighter look */
+  align-items: flex-start; /* Align items to the left */
+ }
+ 
+
+ .contact-item {
+  background-color: #ffffff;
+  padding: 10px 20px; /* Reduced padding */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: none; /* Remove max-width to fill the available space */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+
+ .contact-item:hover {
+  transform: scale(1.01); /* Slightly reduced scale on hover */
+  box-shadow: 0 10px 22px rgba(0, 151, 167, 0.2); /* Slightly adjusted shadow */
+ }
+ 
+
+ .contact-item span {
+  font-weight: bold;
+  color: #2c3e50;
+ }
+ 
+
+ .call,
+ .email-link {
+  background-color: #0097a7;
+  color: #ffffff;
+  width: 80%;
+  padding: 6px 12px; /* Reduced padding */
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+ }
+ 
+
+ .call:hover,
+ .email-link:hover {
+  background-color: #007b8a;
+ }
+ 
+
+ .map-container {
+  flex: 1; /* Takes up remaining space, will be on the right */
+  margin-top: 0; /* Reset margin top */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: auto; /* Adjust width to fit the container */
+  height: 300px; /* Set a fixed height for the map */
+ }
+ 
+
+ @media (max-width: 768px) { /* Adjust breakpoint for smaller screens */
+  #contact {
+  flex-direction: column; /* Stack items vertically on smaller screens */
+  text-align: center; /* Center text on smaller screens */
+  padding: 20px;
+  }
+ 
+
+  .contact-info {
+  padding-right: 0;
+  }
+ 
+
+  #contact h2 {
+  text-align: center;
+  }
+ 
+
+  .contact-card {
+  align-items: center; /* Center contact items on smaller screens */
+  }
+ 
+
+  .contact-item {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  }
+ 
+
+  .call,
+  .email-link {
+  width: 90%;
+  text-align: center;
+  }
+ 
+
+  .map-container {
+  height: 300px;
+  margin-top: 20px;
+  }
+ }
+/* Removed .contact-container as it was causing issues.
+   If you need a wrapper for other reasons, apply display:flex and justify-content:center to it. */
+
+footer {
+    background-color: #2c3e50;
+    color: #f1f1f6;
+    height: 50px;
+    text-align: center; /* Centers the text horizontally */
+    line-height: 50px; /* Vertically centers the text within the footer */
+    width: 100%; /* Ensures footer spans full width */
+    margin-top: 60px; /* Add some space above the footer */
 }
 
     
-    @media only screen and (max-width: 1040px){
-        .nav-button {
-            background: transparent;
-            border: none;
-            color: rgb(0, 0, 0);
-            padding: 10px 22px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 10px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 12px;
-            box-shadow: 0 5px #ffffff;
-            transition: transform 0.5s, box-shadow 0.3s;
-        }
-        #about, .about1 {
-            background-color: #f5fbfa;
-            box-shadow: 2px 2px 12px #070707;
-            padding: 20px;
-            width: 100%; /* Adjust width as needed */
-            margin: 5px;
-            transition: transform 1s;
-            font-size: 40px;
-        }
+    /* Medium Devices (Tablets, Small Laptops) */
+/* === Extra Small Devices (Phones < 480px) === */
+@media only screen and (max-width: 479px) {
+  .nav-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
 
-        #service1, #service2, #service3 {
-            background-color: #f5fbfa;
-            box-shadow: 2px 2px 12px #070707;
-            width: 80%;
-            margin: 40px;
-            float: left;
-            transition: transform 1s;
-            font-size: 30px;
-            font-family: 'Times New Roman', Times, serif;
-            padding: 10px;
-        }
-        .route1, .route2, .route3, .route4 {
-            background-color: #f5fbfa;
-            box-shadow: 2px 2px 12px #070707;
-            width: 80%;
-            margin: 20px;
-            float: left;
-            transition: transform 1s;
-            display: flex;
-            flex-wrap: wrap;
-            font-size: 25px;
-            font-weight: bold;
-            background-color: #2c3e50;
-            color: #f1f1f6;
-        }
-        .img1,.img2,.img3,.img4 {
-            width: 47%;
-            transition: transform 1s;
-        }
-        #contact{
-            font-size: 30px;
-            font-weight: bolder;
-        }
-        .nav-button {
-            background: transparent;
-            border: none;
-            color: rgb(0, 0, 0);
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 30px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 12px;
-            box-shadow: 0 5px #ffffff;
-            transition: transform 0.5s, box-shadow 0.3s;
-            }
-    }
-        @media only screen and (max-width: 470px){
-            .nav-button {
-                background: transparent;
-                border: none;
-                color: rgb(0, 0, 0);
-                padding: 10px 22px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 10px;
-                margin: 4px 2px;
-                cursor: pointer;
-                border-radius: 12px;
-                box-shadow: 0 5px #ffffff;
-                transition: transform 0.5s, box-shadow 0.3s;
-            }
-            #about, .about1 {
-                background-color: #f5fbfa;
-                box-shadow: 2px 2px 12px #070707;
-                padding: 20px;
-                width: 100%; /* Adjust width as needed */
-                margin: 5px;
-                transition: transform 1s;
-                font-size: 15px;
-            }
+  #about, .about1, #service1, #service2, #service3,
+  .route1, .route2, .route3, .route4 {
+    width: 100%;
+    font-size: 14px;
+    margin: 8px auto;
+  }
 
-            #service1, #service2, #service3 {
-                background-color: #f5fbfa;
-                    box-shadow: 2px 2px 12px #070707;
-                width: 80%;
-                margin: 40px;
-                float: left;
-                transition: transform 1s;
-                font-size: 16px;
-            }
-            .route1, .route2, .route3, .route4 {
-                background-color: #f5fbfa;
-                box-shadow: 2px 2px 12px #070707;
-                width: 80%;
-                margin: 20px;
-                float: left;
-                transition: transform 1s;
-                display: flex;
-                flex-wrap: wrap;
-                font-size: 15px;
-                font-weight: bold;
-                background-color: #2c3e50;
-                color: #f1f1f6;
-            }
-            .img1,.img2,.img3,.img4 {
-                width: 47%;
-                transition: transform 1s;
-            }
-            #contact{
-                font-size: 15px;
-                font-weight: bolder;
-            }
-            .nav-button {
-                background: transparent;
-                border: none;
-                color: rgb(0, 0, 0);
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 15px;
-                margin: 4px 2px;
-                cursor: pointer;
-                border-radius: 12px;
-                box-shadow: 0 5px #ffffff;
-                transition: transform 0.5s, box-shadow 0.3s;
-            }
-            .pop{
-                font-size: 5px;
-                font-weight: bold;
-            }
-        }   
+  .img1, .img2, .img3, .img4 {
+    width: 100%;
+  }
+
+  #contact {
+    font-size: 14px;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .pop {
+    font-size: 12px;
+  }
+}
+
+/* === Small Devices (Phones: 480px to 768px) === */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .nav-button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+
+  #about, .about1,
+  .route1, .route2, .route3, .route4 {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .img1, .img2, .img3, .img4 {
+    width: 48%;
+    margin: 1%;
+  }
+  #service1, #service2, #service3 {
+    width: 90%;
+    font-size: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+  }
+
+  #contact {
+    font-size: 16px;
+    flex-direction: column;
+  }
+}
+
+/* === Medium Devices (Tablets: 769px to 1024px) === */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .nav-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  #about, .about1 {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  #service1, #service2, #service3 {
+    width: 90%;
+    font-size: 15px;
+    padding: 20px;
+  }
+
+  .route1, .route2, .route3, .route4 {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .img1, .img2, .img3, .img4 {
+    width: 48%;
+    margin: 1%;
+  }
+
+  #contact {
+    font-size: 18px;
+  }
+}
+
