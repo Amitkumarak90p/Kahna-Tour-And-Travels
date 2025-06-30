@@ -1,4 +1,7 @@
-document.querySelector('.call').addEventListener('click', () => {
-  console.log('Button clicked');
-  alert("Call On 9857400027");
+window.addEventListener("DOMContentLoaded", () => {
+  const scrollContainer = document.querySelector('.scroll-container');
+
+  // 👇 Clone all images to simulate infinite scroll
+  const clone = scrollContainer.cloneNode(true);
+  scrollContainer.parentElement.appendChild(clone);
 });

@@ -2,11 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <section class="hero">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="images/mountains.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero-content">
+    <h1>Explore Himachal With Comfort</h1>
+    <p>Book cars easily and enjoy your journey</p>
+    <a href="#routes"><button>View Popular Routes</button></a>
+  </div>
+</section>
+
+
     <header class="header" id="header">
         <div id="logo">
             <a href="index.html"><img src="images/logo.png" alt="logo"></a>
@@ -17,11 +32,11 @@
         <nav>
             <ul class="nav">
                 <b><li><a href="index.html" target="_blank" class="nav-button">Home</a></li>
-                <li>&nbsp;&nbsp;&nbsp;<a href="#about" class="nav-button">About</a></li>
-                <li>&nbsp;&nbsp;&nbsp;<a href="#services" class="nav-button">Services</a></li>
-                <li>&nbsp;&nbsp;&nbsp;<a href="#routes" class="nav-button">Routes</a></li>
-                <li>&nbsp;&nbsp;&nbsp;<a href="#gallery" class="nav-button">Gallery</a></li>
-                <li>&nbsp;&nbsp;&nbsp;<a href="#contact" class="nav-button">Contact</a></li></b>
+                <li><a href="#about" class="nav-button">About</a></li>
+                <li><a href="#services" class="nav-button">Services</a></li>
+                <li><a href="#routes" class="nav-button">Routes</a></li>
+                <li><a href="#gallery" class="nav-button">Gallery</a></li>
+                <li><a href="#contact" class="nav-button">Contact</a></li></b>
             </ul>
         </nav>
     </header>
@@ -93,37 +108,42 @@
             </div>
            
         </div>
-        <div id="gallery">
+        <div id="gallery" class="scroll-gallery">
             <h2 style="color: aliceblue;">Gallery :</h2>
-            <img class="img1" src="images/crista1.jpg" alt="">
-            <img class="img3" src="images/crista4.jpg" alt="">
-            <img class="img4" src="images/etios3.jpg" alt="">
-            <img class="img4" src="images/hanumanji.jpg" alt="">
-            <img class="img4" src="images/etios1.jpg" alt="">
-            <img class="img4" src="images/etios2.jpg" alt="">
-            <img class="img4" src="images/etios4.jpg" alt="">
-            <img class="img4" src="images/mountain3.jpg" alt="">
-            <img class="img4" src="images/innva1.jpg" alt="">
-            <img class="img4" src="images/innova2.jpg" alt="">
-            <img class="img4" src="images/innova3.jpg" alt="">
-            <img class="img4" src="images/innova4.jpg" alt="">
-            <img class="img4" src="images/mountain1.jpg" alt="">
-            <img class="img4" src="images/mountain4.jpg" alt="">
-            <img class="img4" src="images/mountain5.jpg" alt="">
-            <img class="img4" src="images/mountain7.jpg" alt="">
-            
+            <div class="scroll-container">
+                
+                <img class="img1" src="images/crista1.jpg" alt="">
+                <img class="img3" src="images/crista4.jpg" alt="">
+                <img class="img4" src="images/etios3.jpg" alt="">
+                <img class="img4" src="images/hanumanji.jpg" alt="">
+                <img class="img4" src="images/etios1.jpg" alt="">
+                <img class="img4" src="images/etios2.jpg" alt="">
+                <img class="img4" src="images/etios4.jpg" alt="">
+                <img class="img4" src="images/mountain3.jpg" alt="">
+                <img class="img4" src="images/innva1.jpg" alt="">
+                <img class="img4" src="images/innova2.jpg" alt="">
+                <img class="img4" src="images/innova3.jpg" alt="">
+                <img class="img4" src="images/innova4.jpg" alt="">
+                <img class="img4" src="images/mountain1.jpg" alt="">
+                <img class="img4" src="images/mountain4.jpg" alt="">
+                <img class="img4" src="images/mountain5.jpg" alt="">
+                <img class="img4" src="images/mountain7.jpg" alt="">
+            </div>
         </div>
         <div id="contact">
             <h2>Contact Us :</h2>
             <b><p>For any queries or assistance, please contact us at:</p>
-            <p>Phone:&nbsp;<button class="call">Call</button></p>
+            <p>Phone:&nbsp;
+                <a href="tel:+919857400027" class="call">Call</a>
+                
             <p><a href="mailto:aaainnovs@gmail.com">Email:aaainnovs@gmail.com</a></p></b>
         </div>
         
-        <script src="script.js"></script>
+        
     </div>
     <footer>
         <center><p class="footer">&copy; 2024 Kanha Tour And Travels. All Rights Reserved.</p></center>
     </footer>
+    <script src="script.js" defer></script>
 </body>
 </html>
